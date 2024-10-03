@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Contact Felix</title>
+    <style>
+        /* Main Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Welcoming message styles */
+        .welcome {
+            background-color: #4CAF50; /* Change the background color */
+            color: white; /* Change the text color */
+            text-align: center; /* Center the text */
+            padding: 50px; /* Add padding around the header */
+        }
+        h1 {
+            font-size: 2.5em; /* Increase the font size for the header */
+        }
+        p {
+            font-size: 1.2em; /* Increase the font size for the paragraph */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="welcome">
+            <h1>Welcome to Felix Oluwadamilare Daniels' Portfolio</h1>
+            <p>Full-Stack and Software Developer</p>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Get in Touch</h2>
+            <form action="/submit_form" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Felix Oluwadamilare Daniels" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="drayflextech@yahoo.com" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Hello, My name is Felix O. Daniels, and I am a passionate software developer looking for job opportunities in the tech industry. I came across your profile and was impressed by your work. I would love the chance to connect and discuss any potential openings or collaborations. Thank you for your time! Best regards, Felix O. Daniels. linkedin.com/felix-o-daniels" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Other Ways to Contact Me</h2>
+            <p>Email: <a href="mailto:drayflextech@yahoo.com">drayflextech@yahoo.com</a></p>
+            <p>Phone: +234 703 009 9992</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/felix-o-daniels">Connect with me</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Felix Oluwadamilare Daniels. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Projects - My Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Felix Oluwadamilare Daniels' Projects</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Past Projects</h2>
+            <div>
+                <h3>Stock Market Tracker</h3>
+                <p>A React-based stock market tracker for real-time updates.</p>
+            </div>
+            <div>
+                <h3>Inventory Management App</h3>
+                <p>A Flask app to manage inventory, track sales, and monitor stock levels.</p>
+            </div>
+            <div>
+                <h3>Web Development</h3>
+                <p>Developed a fully functional e-commerce website.</p>
+            </div>
+            <div>
+                <h3>Data Analysis</h3> 
+                <p>Performed data analysis on financial reports using Python.</p>
+            </div>    
+            <div>
+                <h3>Mobile App Development</h3> 
+                <p>Built a cross-platform mobile app using Flutter.</p>
+            </div>   
+            <div>
+                <h3>To-Do-List App</h3>
+                <p>A To-Do List App is a simple, user-friendly tool that helps you organize and manage tasks.</p>
+            </div>
+            <div>    
+                <h3>Simple Calculator</h3> 
+                <p>A Simple Calculator in Python is a basic program that allows users to perform standard arithmetic operations.</p>
+            </div>
+            <div>
+                <h3>Weather App</h3>
+                <p>A Weather App in Python fetches real-time weather data for a specific location.</p>
+            </div>
+            <div>
+                <h3>Expense Tracker</h3>
+                <p>An Expense Tracker is a Python-based application that helps users manage their financial transactions.</p>
+            </div>
+            <div>
+                <h3>Number Guessing Game</h3> 
+                <p>A Number Guessing Game in Python where the computer selects a random number within a specified range.</p>
+           </div>
+           <div>
+               <h3>Simple Digital Clock</h3> 
+               <p>A Simple Digital Clock in Python displays the current time in a digital format.</p>
+            </div>
+            <div>
+                <h3>Investment Portfolio Tracker<h3> 
+                <p>An Investment Portfolio< Tracker enables users to monitor and manage their investment portfolios.</p>
+            </div>
+            <ul>
+                {% for project in projects %}
+                <li>
+                    <strong>{{ project.title }}</strong>: {{ project.description }}
+                    <a href="https://github.com/yourusername/{{ project.title | replace(' ', '-').lower() }}" target="_blank">View on GitHub</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
